@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Compost Donation Page</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="stylesheet3.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Lato"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script defer src="main.js"></script>
+    </head>
+
+  <body style="background-color:#FFCB2C">
+  <div class="w3-top">
+      <div class="w3-bar w3-blue-grey w3-card w3-left-align w3-large">
+          <a
+                  class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue-grey"
+                  href="javascript:void(0);"
+                  onclick="myFunction()"
+                  title="Toggle Navigation Menu"
+          ><i class="fa fa-bars"></i
+          ></a>
+          <a
+                  href="UserView.html"
+                  class="w3-bar-item w3-button w3-hide-small w3-padding-large  w3-hover-white"
+          >Community Donation </a
+          >
+          <a
+                  href="Browse.html"
+                  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+          >Browse</a
+          >
+
+          <a
+                  href="Compost.html"
+                  class="w3-bar-item w3-button w3-padding-large  w3-white"
+          >Compost Donation</a
+          >
+
+          <a
+                  href="map.html"
+                  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+          >Drop off location</a
+          >
+
+          <a
+                  href="Rewards.html"
+                  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+          >Rewards</a
+          >
+
+          <a
+                  onclick="logout()"
+                  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">
+              <span class="glyphicon glyphicon-log-out"></span> Log out
+          </a
+          >
+      </div>
+
+	</div>
+  <div class="about-section">
+    <div class="textinfo">
+      <h2>Compost Donation</h2> <br>
+      <p>Compost is organic material that can be added to soil to help plants grow. Food scraps and yard waste together currently make up more than 30 percent of what we throw away, and could be composted instead. Making compost keeps these materials out of landfills where they take up space and release methane, a potent greenhouse gas.</p>
+      <input type="button" class= "w3-button w3-black w3-padding-large w3-large w3-margin-top" value="PLAY" onclick="play()">
+    <audio id="audio" src="audio/Compost.mp3"></audio>
+    <video width="500" height="225" margin= 20 controls>
+   <source src="Videos/COMPOSTING MATERIALS - WHAT TO ADD AND AVOID IN COMPOST BIN _ CN Ratio.mp4" type=video/mp4>
+  Your browser does not support the video tag.
+</video>
+  </div>
+  </div>
+  <header class="w3-container w3-blue w3-center" style="padding:128px 16px">
+
+  </div>
+	<img src ="images/compost2.jpg" alt="compost" class = "compostinfo" width="300" height="500" style="float:right;
+
+
+
+            <header
+                class="w3-container w3-blue w3-center"
+                style="padding: 384px 16px"
+            ></header>
+            <div class="Booking">
+                <form method="POST" action="/Public/success.html" id="compostform" class="compostform">
+                    <h2>Drop Off Compost</h2>
+
+
+                <label for="appt">Drop off date:</label>
+                <input type="date"  id="txtDate" required="Required" class="form-control" name="txtDate" placeholder="Select suitable date" />
+
+                    <label for="Hours">Number of compost bags:</label>
+
+                    <select
+                        name="bags"
+                        id="bag"
+                        onChange="update()"
+                        required
+                    >
+                        <option selected disabled>Number of bags</option>
+                        <option value="2">1 bag</option>
+                        <option value="3">2 bags</option>
+                        <option value="4">3 bags</option>
+                        <option value="5">4 bags</option>
+                        <option value="6">5 bags</option>
+                    </select>
+
+                    <label>Reward Points </label>
+                    <input id="value" readonly />
+                    <input onclick="window.location.href = 'success.html';" type="submit" value="Submit request" />
+
+                </form>
+            </div>
+
+            <script>
+                function calculatereward(hours) {
+                    switch (hours) {
+                        case 2:
+                            return 10;
+                        case 3:
+                            return 20;
+                        case 4:
+                            return 30;
+                        case 5:
+                            return 40;
+                        case 6:
+                            return 50;
+                        default:
+                            return 0;
+                    }
+                }
+
+
+
+                function update() {
+                    var select = document.getElementById("bag");
+                    var option = select.options[select.selectedIndex];
+
+                    var price = calculatereward(parseInt(option.value));
+
+                    document.getElementById("value").value =
+                         String(price);
+                }
+
+
+
+                var today = new Date().toISOString().split('T')[0];
+  document.getElementsByName("txtDate")[0].setAttribute('min', today);
+
+  function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
+  }
+            </script>
+    </body>
+</html>

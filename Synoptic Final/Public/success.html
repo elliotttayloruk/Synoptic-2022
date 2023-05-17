@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sign In</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="stylesheet3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Lato", sans-serif
+    }
+
+    .w3-bar,
+    h1,
+    button {
+      font-family: "Montserrat", sans-serif
+    }
+  </style>
+  <script defer src="main.js"></script>
+</head>
+
+<body style="background-color:#b8edcc">
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-blue-grey w3-card w3-left-align w3-large">
+    <a
+            class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue-grey"
+            href="javascript:void(0);"
+            onclick="myFunction()"
+            title="Toggle Navigation Menu"
+    ><i class="fa fa-bars"></i
+    ></a>
+    <a
+            href="UserView.html"
+            class="w3-bar-item w3-button w3-padding-large  w3-white "
+    >Community Donation </a
+    >
+    <a
+            href="Browse.html"
+            class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+    >Browse</a
+    >
+
+    <a
+            href="Compost.html"
+            class="w3-bar-item w3-button w3-hide-small w3-padding-large  w3-hover-white"
+    >Compost Donation</a
+    >
+
+    <a
+            href="map.html"
+            class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white "
+    >Drop off location</a
+    >
+
+    <a
+            href="Rewards.html"
+            class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+    >Rewards</a
+    >
+
+    <a
+            onclick="logout()"
+            class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">
+      <span class="glyphicon glyphicon-log-out"></span> Log out
+    </a
+    >
+  </div>
+</div>
+
+<!--Header-->
+<header class="w3-container w3-blue w3-center" style="pa  <div Id="wrapper">
+<img src ="images/LOGO.jpg" alt="Project logo" class = logo>
+</div>
+</header>
+
+<div class="log-in"><br>
+  <h1 id = "thankyou">Your compost donation has been submitted. Thank you!</h1>
+</div>
+<div>
+  <button id="backbutton" onclick="back()">Back</button>
+</div>
+
+</body>
+
+</html>
+
+

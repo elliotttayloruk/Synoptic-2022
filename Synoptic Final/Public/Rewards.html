@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rewards Page</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="stylesheet3.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Lato"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script defer src="main.js"></script>
+    </head>
+
+  <body style="background-color:#FFCB2C">
+  <div class="w3-top">
+      <div class="w3-bar w3-blue-grey w3-card w3-left-align w3-large">
+          <a
+                  class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue-grey"
+                  href="javascript:void(0);"
+                  onclick="myFunction()"
+                  title="Toggle Navigation Menu"
+          ><i class="fa fa-bars"></i
+          ></a>
+          <a
+                  href="UserView.html"
+                  class="w3-bar-item w3-button w3-padding-large  w3-hover-white "
+          >Community Donation </a
+          >
+          <a
+                  href="Browse.html"
+                  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+          >Browse</a
+          >
+
+          <a
+                  href="Compost.html"
+                  class="w3-bar-item w3-button w3-hide-small w3-padding-large  w3-hover-white"
+          >Compost Donation</a
+          >
+
+          <a
+                  href="map.html"
+                  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white "
+          >Drop off location</a
+          >
+
+          <a
+                  href="Rewards.html"
+                  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white"
+          >Rewards</a
+          >
+
+          <a
+                  onclick="logout()"
+                  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">
+              <span class="glyphicon glyphicon-log-out"></span> Log out
+          </a
+          >
+      </div>
+
+	</div>
+
+<div class="about-section">
+  <div class="textinfo">
+    <h2>Rewards</h2> <br>
+    <p>We would like to introduce you to our rewards system.</p>
+      <p> This has been interlinked with local businesses and council</p>
+      <input type="button" class= "w3-button w3-black w3-padding-large w3-large w3-margin-top" value="PLAY" onclick="play()">
+      <audio id="audio2" src="audio/Rewards.mp3"></audio>
+</div>
+</div>
+<div class="row">
+<div class="column">
+  <div class="card">
+    <img src="./images/gift.jpg" alt="farmer" style="width:100%">
+    <div class="container">
+      <h2>Farmer Discount</h2>
+      <p>Farmers who decide to take part in this project will have their delivery fees of resources covered by/discounted by the local council. Also all compost that is collected will be divided among the farmers to feed animals and improve soil quality.</p>
+      <input type="button" class= "w3-button w3-black w3-padding-large w3-large w3-margin-top" value="PLAY" onclick="play()">
+    <audio id="audio" src="audio/Farmers.mp3"></audio>
+    </div>
+  </div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="../User%20Pages/images/Diploma.jpg" alt="diploma" style="width:100%">
+    <div class="container">
+      <h2>Certifcates</h2>
+      <p>Young people who volunteer to help with the project for 30 days or receive 10000 Reward points will be eligible to receive a certificate from the local council. To help young people get into further education this will be considered an advantageous certificate that universities in Australia will consider an edge in comparison to other candidates.</p>
+      <input type="button" class= "w3-button w3-black w3-padding-large w3-large w3-margin-top" value="PLAY" onclick="play()">
+    <audio id="audio1" src="audio/diploma.mp3"></audio>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+<footer>
+<div> Created by Group 72</div>
+</footer>
+<script>
+     function play() {
+       var audio = document.getElementById("audio");
+       audio.play();
+     }
+     function play() {
+       var audio = document.getElementById("audio1");
+       audio.play();
+     }
+     function play() {
+       var audio = document.getElementById("audio2");
+       audio.play();
+     }
+  </script>
+</body>
+</html>

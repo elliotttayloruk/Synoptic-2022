@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign In</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheet3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        .w3-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
+        }
+    </style>
+    <script defer src="main.js"></script>
+</head>
+
+<body style="background-color:#FFCB2C">
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-blue-grey w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="Homepage.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+            <a href="signin.html" class="w3-bar-item w3-button w3-padding-large w3-white">Login</a>
+        </div>
+    </div>
+
+    <!--Header-->
+    <header class="w3-container w3-blue w3-center" style="pa  <div Id="wrapper">
+      <img src ="images/LOGO.jpg" alt="Project logo" class = logo>
+    </div>
+    </header>
+
+    <div class="log-in">
+        <form id ='login'>
+
+            <h1>Account Login</h1>
+
+                <label for="username">Username*:</label>
+                <input type="text" class="input" name ="username" id="username" accesskey="U" required placeholder="Enter your Username">
+
+                <label for= "password">Password*</label>
+                <input type="password" class="input" name ="password" id="password" accesskey="P" required placeholder="Enter your Password"><br>
+
+            <input type= "button" class="button" value="Submit Information" id = "submit">
+            <br><input type="reset" class= "button" value="Reset Form"><br><br>
+
+            <a class="hyper" href="/Register"> Don't have an account? Create an account here!</a><br>
+            <a class="hyper" href="/Admin-Login"> Admin User? Log in here!</a>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> The Even Food Distrubution project Homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stylesheet3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-blue-grey w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue-grey" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="Homepage.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="signin.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+  </div>
+
+  <!-- Navbar on small screens
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Login</a>
+  </div>
+-->
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-blue w3-center" style="padding:128px 16px">
+  <div Id="wrapper">
+	<img src ="images/LOGO.jpg" alt="Project logo" class = logo>
+</div>
+
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <input type="button" class= "w3-button w3-black w3-padding-large w3-large w3-margin-top" value="PLAY" onclick="play()">
+    <audio id="audio" src="audio/Hompage.mp3"></audio>
+      <h1>Donate Food Today</h1>
+      <h5 class="w3-padding-32">The group has collectively decided to create a project that specifically targets the food and land management issue, one of the main challenge areas from Cape York, Australia. The main goal is to create a way for the people in the community to help each other, to reduce food waste and to help the ecosystem.
+</h5>
+    </div>
+
+  <a href = "signin.html"<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Donate Now</button></a>
+</header>
+
+<!-- First Grid -->
+
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+  <p>Created by Group 72 </p>
+</footer>
+
+<script>
+     function play() {
+       var audio = document.getElementById("audio");
+       audio.play();
+     }
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

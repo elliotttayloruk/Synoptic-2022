@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Community Donation Page</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="stylesheet3.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Lato"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script defer src="main.js"></script>
+    </head>
+
+  <body style="background-color:#ecfbf3">
+        <div class="w3-top">
+            <div class="w3-bar w3-blue-grey w3-card w3-left-align w3-large">
+                <a
+                    class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue-grey"
+                    href="javascript:void(0);"
+                    onclick="myFunction()"
+                    title="Toggle Navigation Menu"
+                    ><i class="fa fa-bars"></i
+                ></a>
+                <a
+                    href="UserView.html"
+                    class="w3-bar-item w3-button w3-padding-large  w3-white "
+                    >Community Donation </a
+                >
+                <a
+                    href="Browse.html"
+                    class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+                    >Browse</a
+                >
+
+                <a
+                    href="Compost.html"
+                    class="w3-bar-item w3-button w3-hide-small w3-padding-large  w3-hover-white"
+                    >Compost Donation</a
+                >
+
+                <a
+                    href="map.html"
+                    class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white "
+                    >Drop off location</a
+                >
+
+                <a
+                    href="Rewards.html"
+                    class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+                    >Rewards</a
+                >
+
+                <a
+                    onclick="logout()"
+                    class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">
+                    <span class="glyphicon glyphicon-log-out"></span> Log out
+                    </a
+                >
+            </div>
+
+	</div>
+  <div class="about-section">
+    <div class="textinfo">
+      <h2>Community Donation</h2> <br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  </div>
+  </div>
+  <header class="w3-container w3-blue w3-center" style="padding:128px 16px">
+    <div Id="wrapper">
+  	<img src ="/images/LOGO.jpg" alt="Project logo" class = logo>
+  </div>
+
+
+
+      <header
+              class="w3-container w3-blue w3-center"
+              style="padding: 384px 16px"
+      ></header>
+      <div class="Booking">
+          <form action = "/DonateFood" method="POST" id="donationform"> <!-- -->
+              <h2>Drop Off Food</h2>
+              <label for="appt">Drop off date:</label>
+              <input type="date"  id="txtDate" required="Required" class="form-control" name="txtDate" placeholder="Select suitable date" />
+              <div class="container1">
+                  <div><label for="Food">Food Item:</label><input type="text" name="mytext[]"/><label for="Expired">Expiry Date:</label> <input type="date"  id="txtDate" required="Required" class="form-control" name="txtDate" /></div>
+              </div>
+              <button class="add_form_field"> Add Food item &nbsp;
+                  <span style="font-size:16px; font-weight:bold;">+ </span>
+              </button>
+              <button id = "submitFoodDonationButton" input type = "submit" class="booking">Submit Donation</button> <!-- add button type = "submit", and id submitFoodDonationButton-->
+
+          </form>
+      </div>
+
+      <script>
+          $(document).ready(function() {
+              var max_fields = 10;
+              var wrapper = $(".container1");
+              var add_button = $(".add_form_field");
+
+              var x = 1;
+              $(add_button).click(function(e) {
+                  e.preventDefault();
+                  if (x < max_fields) {
+                      x++;
+                      $(wrapper).append('<div><label for="Food">Food Item:</label><input type="text" name="mytext[]"/><label for="Expired">Expiry Date:</label> <input type="date"  id="txtDate" required="Required" class="form-control" name="txtDate" /><a href="#" class="delete">Delete </a> </div>'); //add input box
+                  } else {
+                      alert('You Reached the limits')
+                  }
+              });
+
+              $(wrapper).on("click", ".delete", function(e) {
+                  e.preventDefault();
+                  $(this).parent('div').remove();
+                  x--;
+              })
+          });
+
+          var today = new Date().toISOString().split('T')[0];
+          document.getElementsByName("txtDate")[0].setAttribute('min', today);
+
+      </script>
+  </body>
+</html>
